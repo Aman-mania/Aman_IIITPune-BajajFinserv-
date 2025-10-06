@@ -4,33 +4,6 @@
 **Registration:** 112215015  
 **Email:** 112215015@cse.iiitp.ac.in
 
-## Problem Statement
-
-Find the highest salary that was credited to an employee, with the condition that the transaction was **NOT** made on the 1st day of any month.
-
-**Expected Output:**
-- `SALARY`: The highest salary amount
-- `NAME`: Employee's full name (First Name + Last Name)  
-- `AGE`: Employee's age
-- `DEPARTMENT_NAME`: Department name
-
-## Solution Approach
-
-### Challenge Analysis
-The challenge requires:
-- Use WebClient with Spring Boot
-- No controller/endpoint should trigger the flow
-- JWT authentication required for the second API call
-- Automatic execution on application startup
-
-### Architecture Design
-Clean, modular architecture with:
-- **Service Layer**: `SolutionService` - Core business logic
-- **Client Layer**: `WebhookClient` - HTTP communication
-- **Data Layer**: JPA entities and repositories
-- **Utility Layer**: SQL query provider
-- **Configuration**: Spring Boot auto-configuration
-
 ### SQL Query Development
 For Question 1 (odd registration number), the SQL solution:
 
@@ -65,24 +38,6 @@ The application follows this automated workflow:
 5. **Database Storage**: Saves the solution to H2 database for persistence
 6. **Solution Submission**: Submits final query using JWT authentication
 
-## Technical Implementation
-
-### Technologies Used
-- **Java 17** - Modern Java features
-- **Spring Boot 3.2.5** - Application framework
-- **Spring WebFlux** - Reactive WebClient for HTTP calls
-- **Spring Data JPA** - Database operations
-- **H2 Database** - In-memory database
-- **Lombok** - Reduces boilerplate code
-- **Maven** - Dependency management
-
-### Key Features
-- **WebClient Integration**: Reactive HTTP client for API calls
-- **Automatic Execution**: Runs on startup via CommandLineRunner
-- **JWT Authentication**: Proper Bearer token implementation
-- **Database Persistence**: Stores solutions in H2 database
-- **Error Handling**: Comprehensive logging and exception handling
-- **Modular Design**: Clean separation of concerns
 
 ## Local Testing
 
@@ -154,6 +109,54 @@ Solution saved to database with ID: 1
 Step 5: Submitting final query to webhook...
 Challenge completed successfully! Final query submitted.
 ```
+
+
+# REFERENCE: Challenge details (Using LLM)
+## Problem Statement
+
+Find the highest salary that was credited to an employee, with the condition that the transaction was **NOT** made on the 1st day of any month.
+
+**Expected Output:**
+- `SALARY`: The highest salary amount
+- `NAME`: Employee's full name (First Name + Last Name)  
+- `AGE`: Employee's age
+- `DEPARTMENT_NAME`: Department name
+
+## Solution Approach
+
+### Challenge Analysis
+The challenge requires:
+- Use WebClient with Spring Boot
+- No controller/endpoint should trigger the flow
+- JWT authentication required for the second API call
+- Automatic execution on application startup
+
+### Architecture Design
+Clean, modular architecture with:
+- **Service Layer**: `SolutionService` - Core business logic
+- **Client Layer**: `WebhookClient` - HTTP communication
+- **Data Layer**: JPA entities and repositories
+- **Utility Layer**: SQL query provider
+- **Configuration**: Spring Boot auto-configuration
+
+## Technical Implementation
+
+### Technologies Used
+- **Java 17** - Modern Java features
+- **Spring Boot 3.2.5** - Application framework
+- **Spring WebFlux** - Reactive WebClient for HTTP calls
+- **Spring Data JPA** - Database operations
+- **H2 Database** - In-memory database
+- **Lombok** - Reduces boilerplate code
+- **Maven** - Dependency management
+
+### Key Features
+- **WebClient Integration**: Reactive HTTP client for API calls
+- **Automatic Execution**: Runs on startup via CommandLineRunner
+- **JWT Authentication**: Proper Bearer token implementation
+- **Database Persistence**: Stores solutions in H2 database
+- **Error Handling**: Comprehensive logging and exception handling
+- **Modular Design**: Clean separation of concerns
 
 ## Error Handling
 
