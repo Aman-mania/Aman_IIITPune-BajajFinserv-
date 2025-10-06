@@ -99,6 +99,8 @@ Thoroughly tested the solution using **Postman** to verify:
   "email": "112215015@cse.iiitp.ac.in"
 }
 ```
+<img width="1759" height="598" alt="image" src="https://github.com/user-attachments/assets/5bfaacf3-477a-47e4-99e1-a7940a3a2703" />
+
 - **Result**: Successfully received JWT token and webhook URL
 
 ### Test 2: Solution Submission
@@ -111,6 +113,8 @@ Thoroughly tested the solution using **Postman** to verify:
   "finalQuery": "SELECT p.AMOUNT AS SALARY, CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) AS NAME, TIMESTAMPDIFF(YEAR, e.DOB, CURDATE()) AS AGE, d.DEPARTMENT_NAME FROM PAYMENTS p JOIN EMPLOYEE e ON p.EMP_ID = e.EMP_ID JOIN DEPARTMENT d ON e.DEPARTMENT = d.DEPARTMENT_ID WHERE DAY(p.PAYMENT_TIME) != 1 ORDER BY p.AMOUNT DESC LIMIT 1;"
 }
 ```
+<img width="1759" height="566" alt="image" src="https://github.com/user-attachments/assets/9f8c1783-a280-4a41-ac4b-7a5ceea4e723" />
+
 - **Result**: Successfully submitted SQL solution
 
 ## Setup & Execution
