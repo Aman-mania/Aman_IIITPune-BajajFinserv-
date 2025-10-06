@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/webhookdb;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+
+app:
+  generate-webhook-url: "https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/JAVA"
+  test-webhook-url: "https://bfhldevapigw.healthrx.co.in/hiring/testWebhook/JAVA"
+  regNo: "112215015"  # Your actual registration number (15 is odd - Question 1)
+  name: "Aman Biswakarma"  # Your actual name
+  email: "112215015@cse.iiitp.ac.in"  # Your actual email
